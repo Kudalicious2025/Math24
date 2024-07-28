@@ -2,7 +2,6 @@
 let currentScore = 0;
 let highScore = 0; 
 let difficulty = "easy";
-let timerInterval;
 
 // Get references to DOM elements
 const num1 = document.getElementById("num1");
@@ -14,7 +13,6 @@ const submitButton = document.getElementById("submit");
 const feedback = document.getElementById("feedback");
 const currentScoreDisplay = document.getElementById("current-score");
 const highScoreDisplay = document.getElementById("high-score");
-const timeLeftDisplay = document.getElementById("time-left");
 
 // Function to generate a new puzzle
 function generatePuzzle() {
@@ -28,8 +26,8 @@ function generatePuzzle() {
   num3.textContent = numbers[2];
   num4.textContent = numbers[3];
 
-  feedback.textContent = ""; 
-  expressionInput.value = ""; 
+  feedback.textContent = ""; // Clear previous feedback
+  expressionInput.value = ""; // Clear input field
 }
 
 // Function to check the user's solution (simplified)
@@ -44,7 +42,13 @@ function checkSolution() {
       currentScore++;
       currentScoreDisplay.textContent = currentScore;
       updateHighScore();
-      generatePuzzle();
+      generatePuzzle(); // Generate a new puzzle
+
+      // Display correct message for 3 seconds
+      setTimeout(() => {
+        feedback.textContent = ""; // Clear feedback after 3 seconds
+        feedback.classList.remove("correct");
+      }, 3000);
     } else {
       feedback.textContent = "Incorrect. Try again!";
       feedback.classList.remove("correct");
@@ -61,41 +65,60 @@ function updateHighScore() {
   if (currentScore > highScore) {
     highScore = currentScore;
     highScoreDisplay.textContent = highScore;
+    // You could store this in localStorage to make it persistent
   }
-}
-
-// Function to start the game
-function startGame() {
-  generatePuzzle();
-  startTimer();
-}
-
-// Function to start the timer
-function startTimer() {
-  let timeLeft = 120;
-  timeLeftDisplay.textContent = timeLeft;
-  
-  timerInterval = setInterval(() => {
-    timeLeft--;
-    timeLeftDisplay.textContent = timeLeft;
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      currentScore--;
-      currentScoreDisplay.textContent = currentScore;
-      alert("Time's up! 1 point deducted.");
-    }
-  }, 1000);
-}
-
-// Function to stop the timer
-function stopTimer() {
-  clearInterval(timerInterval);
 }
 
 // Event listeners
 submitButton.addEventListener("click", checkSolution);
 document.getElementById("new-game").addEventListener("click", generatePuzzle);
-document.getElementById("start-game").addEventListener("click", startGame);
 
 // Initial puzzle generation on page load
 generatePuzzle();
+
+document.getElementById('play-link').addEventListener('click', function() {
+  showElementGameArea('game-area');
+  hideElements(['how-to-play', 'quiz', 'contact']);
+});
+
+document.getElementById('rules-link').addEventListener('click', function() {
+  showElement('how-to-play');
+  hideElements(['score', 'quiz', 'contact', 'controls', 'game-area']);
+});
+
+document.getElementById('quiz-link').addEventListener('click', function() {
+  showElement('quiz');
+  hideElements(['how-to-play', 'contact', 'controls', 'game-area', 'score']);
+});
+
+document.getElementById('contact-link').addEventListener('click', function() {
+  showElement('contact');
+  hideElements(['how-to-play', 'controls', 'game-area', 'score','quiz']);
+});
+
+function showElement(id) {
+  document.getElementById(id).style.display = 'block';
+
+
+
+}
+function showElementGameArea(id) {
+  document.getElementById(id).style.display = 'block';
+  document.getElementById(id).style.display = 'flex';  // Add Flexbox properties
+  document.getElementById(id).style.justifyContent = 'center';  // Center horizontally
+  document.getElementById(id).style.alignItems = 'center';  // Center vertically
+
+
+}
+
+function hideElements(ids) {
+  ids.forEach(function(id) {
+      document.getElementById(id).style.display = 'none';
+  });
+}
+
+// Initial setup: hide all sections except the game area
+window.onload = function() {
+  showElementGameArea('game-area');
+  hideElements(['how-to-play', 'quiz', 'contact']);
+};

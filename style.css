@@ -8,6 +8,10 @@ body {
     font-family: Arial, sans-serif; /* Set font to Arial */
 }
 
+
+#game-area, #how-to-play, #quiz, #contact, #controls, #score {
+    display: none;
+}
 #game-area {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center child elements horizontally */
@@ -132,6 +136,7 @@ body {
     max-width: 1200px; /* Set a max width for larger screens */
     margin-bottom: 20px; /* Add space below the elements */
     text-align: center; /* Center align text */
+    font-size:30px;
 }
 
 #controls {
@@ -167,6 +172,21 @@ body {
 .incorrect {
     color: red; /* Red text color */
 }
+#whatsapp-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#whatsapp-chat {
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: #25d366; /* WhatsApp green color */
+    color: white;
+    cursor: pointer;
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {

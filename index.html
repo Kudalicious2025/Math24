@@ -9,6 +9,14 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#game-area" id="play-link">Play</a></li>
+            <li><a href="#how-to-play" id="rules-link">Rules</a></li>
+            <li><a href="#quiz" id="quiz-link">Quiz</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
+        </ul>
+    </nav>
     <div id="game-area">
         <div id="numbers">
             <div class="number" id="num1">4</div>
@@ -17,15 +25,17 @@
             <div class="number" id="num4">4</div> 
         </div> 
 
-        <div id="timer">
-            <p>Time Left: <span id="time-left">120</span> seconds</p>
-        </div>
+        <p id="timer">Time Left: <span id="time-left">120</span> seconds</p>
+         
+  
 
         <input type="text" id="expression" placeholder="Your solution here...">
         <button id="submit">Submit</button>
     </div>
     
     <div id="controls">
+
+        
         <div class="button-container">
             <button id="start-game">Start Game</button>
             <button id="new-game">New Game</button>
@@ -41,7 +51,14 @@
     <div id="score">
         <p>Score: <span id="current-score">0</span></p>
         <p>High Score: <span id="high-score">0</span></p>
+        <div id="feedback"></div>
+
     </div>
+
+
+
+
+
 
     <div id="how-to-play">
         <h3>How to Play</h3>
@@ -53,7 +70,29 @@
         </p>
         <p>Enter your solution in the input box and click "Submit" to check your answer.</p>
     </div>
+
+<section class="quiz" id="quiz">
+<H2>Quiz</H2>
+
+
+</section>
     
+<section class="Contact">
+    <div id="contact">
+        <h3>Contact</h3>
+        <p>
+            If you have any questions or feedback, please contact me at <a href="mailto:kudamusarah@gmail.com">kudamusarah@gmail.com</a>
+
+        </p>
+            <!-- WhatsApp Button -->
+    <div id="whatsapp-button">
+        <a href="https://wa.me/264814386908" target="_blank">
+            <button id="whatsapp-chat">Chat on WhatsApp</button>
+        </a>
+    </div>
+
+</section>
+
     <script src="script.js"></script>
 </body>
 </html>
