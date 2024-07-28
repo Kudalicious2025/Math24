@@ -32,3 +32,29 @@ function generatePuzzle() {
     expressionInput.value = ""; // Clear input field
   }
   
+   
+// Function to check the user's solution (simplified)
+function checkSolution() {
+    const userExpression = expressionInput.value;
+    try {
+      const result = eval(userExpression);
+      if (result === 24) {
+          console.log('correct')
+        feedback.textContent = "Correct!";
+        feedback.classList.remove("incorrect");
+        feedback.classList.add("correct");
+        currentScore++;
+        currentScoreDisplay.textContent = currentScore;
+        updateHighScore();
+        generatePuzzle(); // Generate a new puzzle
+      } else {
+        feedback.textContent = "Incorrect. Try again!";
+        feedback.classList.remove("correct");
+        feedback.classList.add("incorrect");
+      }
+    } catch (error) {
+      feedback.textContent = "Invalid expression!";
+      feedback.classList.remove("correct");
+      feedback.classList.add("incorrect");
+    }
+  }
