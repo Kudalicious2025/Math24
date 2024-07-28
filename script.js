@@ -58,3 +58,25 @@ function checkSolution() {
       feedback.classList.add("incorrect");
     }
   }
+
+  
+function updateHighScore() {
+    // Check if the current score is higher than the high score
+    if (currentScore > highScore) {
+        // Update the high score to the current score
+        highScore = currentScore;
+        // Update the high score display on the page
+        highScoreDisplay.textContent = highScore;
+    }
+}
+
+// Event listeners
+// Add a click event listener to the submit button that calls the checkSolution function
+submitButton.addEventListener("click", checkSolution);
+
+// Add a click event listener to the "new game" button that calls the generatePuzzle function
+document.getElementById("new-game").addEventListener("click", generatePuzzle);
+
+// Initial puzzle generation on page load
+// Call the generatePuzzle function when the page loads to start the game
+generatePuzzle();
