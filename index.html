@@ -43,7 +43,7 @@
             <div class="number" id="num4">4</div> 
         </div> 
 
-        <p id="timer">Time Left: <span id="time-left">120</span> seconds</p>
+        <!-- <p id="timer">Time Left: <span id="time-left">120</span> seconds</p> -->
          
   
 
@@ -89,15 +89,148 @@
         <p>Enter your solution in the input box and click "Submit" to check your answer.</p>
     </div>
 
-<section class="quiz" id="quiz">
-<H2>Quiz</H2>
-
-
-</section>
+    <section class="quiz" id="quiz">
+        <h2>Quiz</h2>
+        <div class="button-container">
+            <button id="subtraction-quiz">Subtraction Quiz</button>
+            <button id="addition-quiz">Addition Quiz</button>
+            <button id="multiplication-quiz">Multiplication Quiz</button>
+            <button id="division-quiz">Division Quiz</button>
+        </div>
+        <div id="subtraction" class="quiz-section">
+            <h3>Subtraction Quiz</h3>
+            <p>Score: <span id="diff-score">0</span>/5</p>
+            <div id="q1">
+                <span id="question1"></span>
+                <input type="text" id="answer1" placeholder="Your answer">
+                <span id="result1" class="result"></span>
+            </div>
+            <div id="q2">
+                <span id="question2"></span>
+                <input type="text" id="answer2" placeholder="Your answer">
+                <span id="result2" class="result"></span>
+            </div>
+            <div id="q3">
+                <span id="question3"></span>
+                <input type="text" id="answer3" placeholder="Your answer">
+                <span id="result3" class="result"></span>
+            </div>
+            <div id="q4">
+                <span id="question4"></span>
+                <input type="text" id="answer4" placeholder="Your answer">
+                <span id="result4" class="result"></span>
+            </div>
+            <div id="q5">
+                <span id="question5"></span>
+                <input type="text" id="answer5" placeholder="Your answer">
+                <span id="result5" class="result"></span>
+            </div>
+            <button id="submit-subtraction">Submit Answers</button>
+        </div>
+        
+        
+        <div id="addition" class="quiz-section">
+            <h3>Addition Quiz</h3>
+            <p>Score: <span id="sum-score">0</span>/5</p>
+            <div id="q6">
+                <span id="question6"></span>
+                <input type="text" id="answer6" placeholder="Your answer">
+                <span id="result6" class="result"></span>
+            </div>
+            <div id="q7">
+                <span id="question7"></span>
+                <input type="text" id="answer7" placeholder="Your answer">
+                <span id="result7" class="result"></span>
+            </div>
+            <div id="q8">
+                <span id="question8"></span>
+                <input type="text" id="answer8" placeholder="Your answer">
+                <span id="result8" class="result"></span>
+            </div>
+            <div id="q9">
+                <span id="question9"></span>
+                <input type="text" id="answer9" placeholder="Your answer">
+                <span id="result9" class="result"></span>
+            </div>
+            <div id="q10">
+                <span id="question10"></span>
+                <input type="text" id="answer10" placeholder="Your answer">
+                <span id="result10" class="result"></span>
+            </div>
+            <button id="submit-addition">Submit Answers</button>
+        </div>
+        
+        
+        <div id="multiplication" class="quiz-section">
+            <h3>Multiplication Quiz</h3>
+            <p>Score: <span id="pro-score">0</span>/5</p>
+            <div id="q11">
+                <span id="question11"></span>
+                <input type="text" id="answer11" placeholder="Your answer">
+                <span id="result11" class="result"></span>
+            </div>
+            <div id="q12">
+                <span id="question12"></span>
+                <input type="text" id="answer12" placeholder="Your answer">
+                <span id="result12" class="result"></span>
+            </div>
+            <div id="q13">
+                <span id="question13"></span>
+                <input type="text" id="answer13" placeholder="Your answer">
+                <span id="result13" class="result"></span>
+            </div>
+            <div id="q14">
+                <span id="question14"></span>
+                <input type="text" id="answer14" placeholder="Your answer">
+                <span id="result14" class="result"></span>
+            </div>
+            <div id="q15">
+                <span id="question15"></span>
+                <input type="text" id="answer15" placeholder="Your answer">
+                <span id="result15" class="result"></span>
+            </div>
+            <button id="submit-multiplication">Submit Answers</button>
+        </div>
+        
+        
+        <div id="division" class="quiz-section">
+            <h3>Division Quiz</h3>
+            <p>Score: <span id="quo-score">0</span>/5</p>
+            <div id="q16">
+                <span id="question16"></span>
+                <input type="text" id="answer16" placeholder="Your answer">
+                <span id="result16" class="result"></span>
+            </div>
+            <div id="q17">
+                <span id="question17"></span>
+                <input type="text" id="answer17" placeholder="Your answer">
+                <span id="result17" class="result"></span>
+            </div>
+            <div id="q18">
+                <span id="question18"></span>
+                <input type="text" id="answer18" placeholder="Your answer">
+                <span id="result18" class="result"></span>
+            </div>
+            <div id="q19">
+                <span id="question19"></span>
+                <input type="text" id="answer19" placeholder="Your answer">
+                <span id="result19" class="result"></span>
+            </div>
+            <div id="q20">
+                <span id="question20"></span>
+                <input type="text" id="answer20" placeholder="Your answer">
+                <span id="result20" class="result"></span>
+            </div>
+            <button id="submit-division">Submit Answers</button>
+        </div>
+        
+    </section>
+    
     
 <section class="Contact">
     <div id="contact">
-        <h3>Contact</h3>
+        <h2 style="text-align: center;">Contact</h2>
+
         <p>
             If you have any questions or feedback, please contact me at <a href="mailto:kudamusarah@gmail.com">kudamusarah@gmail.com</a>
 
@@ -112,5 +245,6 @@
 </section>
 
     <script src="script.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
