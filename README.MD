@@ -43,6 +43,15 @@ Kudakwashe Musara
 
 **Note:** This README.MD file provides a basic framework. You can further customize it by adding:
 
-* Screenshots of your website.
+* Screenshots of website.
+
 * Installation instructions for local development (if applicable).
+
 * References to any resources used during development.
+    ## HTML
+            https://www.w3schools.com/html/default.asp
+    ## Javascipt
+            https://www.w3schools.com/js/default.asp
+    ## CSS
+            https://www.w3schools.com/css/default.asp
+            

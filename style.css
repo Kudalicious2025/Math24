@@ -1,9 +1,160 @@
+
+/* General Styling */
 body {
+    /* Set the default font for the entire document */
     font-family: sans-serif;
+    
+    /* Use flexbox to center content vertically */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center ;
+    
+    
+    /* Set a light gray background color */
     background-color: #f0f0f0;
+    
+    /* Remove default margin and add some padding */
     margin: 0;
+
     padding: 20px;
+
 }
+
+
+
+#game-area {
+      /* Set the background color of the game area to white */
+    background-color: white;
+    /* Add 20 pixels of padding inside the game area */
+    padding: 20px;
+  /* Round the corners of the game area with an 8-pixel radius */
+    border-radius: 8px;
+/* Add a subtle shadow effect to give depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Center-align the content inside the game area */
+    text-align: center;
+}
+
+/* Numbers Display */
+#numbers {
+    /* Use flexbox to create a flexible container for child elements */
+    display: flex;
+    /* Distribute space evenly around flex items, pushing them apart */
+    justify-content: space-around;
+    /* Add 20 pixels of margin at the bottom of the numbers container */
+    margin-bottom: 20px;
+}
+
+.number {
+     /* Set the background color to a green shade */
+    background-color: #4CAF50;
+     /* Set the text color to white for contrast */
+    color: white;
+    /* Increase the font size for better visibility */
+    font-size: 24px;
+     /* Add padding to create space around the content */
+    padding: 15px 25px;
+     /* Round the corners of the element */
+    border-radius: 5px;
+    /* Add a small margin around the element */
+    margin: 5px;
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Input and Button */
+#expression {
+    /* Set a fixed width for the element */
+    width: 250px;
+    /* Add padding inside the element for spacing */
+    padding: 10px;
+     /* Add a light gray border around the element */
+    border: 1px solid #ccc;
+      /* Round the corners of the element */
+    border-radius: 4px;
+    /* Add space below the element */
+    margin-bottom: 10px;
+     /* Set the font size for the content */
+    font-size: 16px;
+}
+
+#submit {
+    /* Set the background color to a blue shade */
+    background-color: #008CBA;
+     /* Set the text color to white for contrast */
+    color: white;
+    /* Add padding inside the button for proper sizing */
+    padding: 10px 20px;
+    /* Remove the default button border */
+    border: none;
+     /* Round the corners of the button */
+    border-radius: 4px;
+    /* Change the cursor to a pointer when hovering over the button */
+    cursor: pointer;
+    /* Set the font size for the button text */
+    font-size: 16px;
+}
+
+
+#submit:hover {
+    /* Change the background color to a darker shade of blue when the button is hovered over */
+    background-color: #00668B;
+}
+
+
+/* Controls */
+#controls {
+    /* Add space above the element */
+    margin-top: 20px;
+}
+
+
+
+#difficulty {
+    /* Add padding inside the element for spacing */
+    padding: 8px;
+    
+    /* Add a light gray border around the element */
+    border: 1px solid #ccc;
+    
+    /* Round the corners of the element */
+    border-radius: 4px;
+    
+    /* Add space to the left of the element */
+    margin-left: 10px;
+    
+    /* Set the font size for the content */
+    font-size: 14px;
+}
+
+
+/* Score Display */
+#score {
+    /* Add space above the element */
+    margin-top: 20px;
+    
+    /* Center-align the text content within the element */
+    text-align: center;
+}
+
+
+/* Feedback */
+
+#feedback {
+    /* Add space above the element */
+    margin-top: 10px;
+    
+    /* Set the font size for the feedback text */
+    font-size: 18px;
+}
+
+.correct {
+    /* Set the text color to green for correct answers */
+    color: green;
+}
+
+.incorrect {
+    /* Set the text color to red for incorrect answers */
+    color: red;
+}
+
